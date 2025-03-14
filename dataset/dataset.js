@@ -41,6 +41,16 @@ exports.dataset = async () => {
         { name: 'One Piece Vol.1', price: 9.99, picture: 'https://picsum.photos/seed/onepiece/200/300', categoryId: categoryMap['Mangas'], createdAt: new Date(), updatedAt: new Date() },
         { name: 'Naruto Vol.1', price: 8.99, picture: 'https://picsum.photos/seed/naruto/200/300', categoryId: categoryMap['Mangas'], createdAt: new Date(), updatedAt: new Date() },
     ];
+
+    for (let i = 0; i < 5000; i++) {
+      products.push({
+        name: "Product" + i,
+        description: "Product desc" + i,
+        price: Math.floor(Math.random() * 1000) / 100,
+        categoryId: Math.floor(Math.random() * 10) + 1,
+      });
+    }
+
     await Product.bulkCreate(products);
 }
 
