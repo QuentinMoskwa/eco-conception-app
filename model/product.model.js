@@ -26,3 +26,5 @@ const Product = bdd.define("product", {
         allowNull: false,
     },
 });
+
+module.exports = Product;
