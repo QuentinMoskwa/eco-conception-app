@@ -7,11 +7,9 @@ router.get('/', () => {
     res.send('This is a test');
 });
 
-router.get('/:id', () => {
-    res.send('This is a test of :' + id);
-});
+router.get('/:id',productController.getById);
 
-router.post('/', () => {});
+router.post('/', productController.create);
 
 router.put('/:id', () => {});
 
