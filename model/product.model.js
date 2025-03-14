@@ -1,4 +1,4 @@
-const {Datatypes, Model} = require('sequelize');
+const {DataTypes, Model} = require('sequelize');
 const {bdd} = require('../framework/connexion.js');
 
 const Product = bdd.define("product", {
