@@ -13,14 +13,13 @@ const Product = bdd.define("product", {
     stock: {
         type: DataTypes.MEDIUMINT,
         allowNull: false,
+        defaultValue: 0,
     },
     reference: {
         type: DataTypes.STRING(12),
-        allowNull: false,
     },
     description: {
         type: DataTypes.TEXT,
-        allowNull: false,
     },
     picture: {
         type: DataTypes.STRING(2083),
